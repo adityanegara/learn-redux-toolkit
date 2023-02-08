@@ -1,0 +1,29 @@
+A) Definisi createSlice
+: Function yang menerima state awal, object dari reducer function,
+nama slice. createSlice akan menghasilkan action creators
+dan action types yang sesuai dengan reducer dan state.
+
+B) Syntax
+: import { createSlice } from '@reduxjs/toolkit';
+  const <nama slice> = createSlice(
+     {
+        name: '<nama slice>',
+        initialState: <state awal>,
+        reducers: <reducer function>
+        extraReducers: <reducer function callback>
+     }
+    )
+
+C) Penjelasan Parameters
+    C.1) initialState
+    : Nilai awal dari slcie.
+
+    C.2) name
+    : nama dari slice. 
+
+    C.3) reducers
+    : object yang berisikan fungsi reducer. 
+
+    C.4) extra reducers
+    : reducer yang akan menjalankan side effect 
+    ketika suatu action di dispatch.
